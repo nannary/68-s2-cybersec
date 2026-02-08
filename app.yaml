@@ -1,0 +1,14 @@
+services:
+  s2app:
+    image: prawee/strapi:latest
+    container_name: 68-s2-app
+    ports:
+      - ${APP_PORT}:1337
+    environment:
+      DATABASE_CLIENT: ${DATABASE_CLIENT}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_DB_PORT}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_USERNAME: ${DATABASE_USER}
+      DATABASE_PASSWORD: ${DATABASE_PASS}
+      NODE_ENV: ${NODE_ENV}
